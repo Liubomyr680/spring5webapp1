@@ -35,7 +35,7 @@ public class BootStrapData implements CommandLineRunner {                       
 
         authorRepository.save(eric);                                              //here we save our book, and author into H2 database.
         bookRepository.save(ddd);
-        publisherRepository.save(eric);
+        publisherRepository.save(brad);
 
         Author rod = new Author("Rod", "Johnson");
         Book noEJB = new Book("J2EE Development","234234");
@@ -45,10 +45,12 @@ public class BootStrapData implements CommandLineRunner {                       
 
         authorRepository.save(rod);                                              //here we save our book, and author into H2 database.
         bookRepository.save(noEJB);
-        publisherRepository.save(rod);
+        publisherRepository.save(john);
 
         System.out.println("Started in Bootstrap");
         System.out.println("Publisher: "+ john.getName() +" "+"Publisher: "+brad.getName());
+        System.out.println(john);
         System.out.println("Number of books: "+ bookRepository.count());
+
     }
 }
