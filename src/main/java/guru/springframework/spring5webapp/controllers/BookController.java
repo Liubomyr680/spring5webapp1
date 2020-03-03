@@ -18,6 +18,6 @@ public class BookController {
     public String getBooks(Model model){                        // and we are using the repository to get a list of books out of the database.
 
         model.addAttribute("books", bookRepository.findAll());
-        return "books";
+        return "list";
     }
 }
